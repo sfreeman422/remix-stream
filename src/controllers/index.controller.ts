@@ -1,3 +1,3 @@
-import { sampleController } from './sample.controller';
+import { sampleController } from './room.controller';
 
 export const controllers = [sampleController];
