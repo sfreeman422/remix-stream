@@ -1,11 +1,11 @@
-import { SampleService } from './sample.service';
+import { RoomService } from './room.service';
 
-describe('SampleService', () => {
-  let sampleService: SampleService;
+describe('RoomService', () => {
+  let service: RoomService;
 
   beforeEach(() => {
-    sampleService = new SampleService();
-    const loggerSpy = jest.spyOn(sampleService.logger, 'info');
+    service = new RoomService();
+    const loggerSpy = jest.spyOn(service.logger, 'info');
     loggerSpy.mockImplementation(() => '');
   });
 
@@ -15,11 +15,11 @@ describe('SampleService', () => {
 
   describe('greet()', () => {
     it('should return the text it is provided', () => {
-      expect(sampleService.greet('Test')).toBe('Test');
+      expect(service.greet('Test')).toBe('Test');
     });
 
     it('should not return something it is not given', () => {
-      expect(sampleService.greet('Test')).not.toBe('test');
+      expect(service.greet('Test')).not.toBe('test');
     });
   });
 });
